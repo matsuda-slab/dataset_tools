@@ -46,7 +46,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
   train, valid, test のディレクトリ内容を元に, 画像のパスを列挙した
   リストファイルを生成する.  
 
-  [ Usage ]
+  [ Usage ]  
     $ create_list.py {データセットのtrain, valid, testがあるパス}
 
 * classify.sh  
