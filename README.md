@@ -15,26 +15,13 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
    workspace は，作業ディレクトリのルートディレクトリを表す．
 
    workspace  
-       |- images  
-       |- labels
+       ├── images  
+       ├── labels
 
    images : 画像ファイルを置いたディレクトリ
    labels : YOLO形式のアノテーションファイルを置いたディレクトリ
 
 2. classify.sh を使って，images のデータセットを train, valid, test に分類する．
-   <!--実行後，以下のようなディレクトリになる．
-
-   workspace
-       |- images
-       |      |- train
-       |      |- valid
-       |      |- test
-       |
-       |- labels
-              |- train
-              |- valid
-              |- test
-              -->
 
 3. create_list.py を使って，画像パスが書かれたリストファイルを作成する．
    学習やテストの際は，このリストファイルをもとに，データセットにアクセスする．
@@ -71,13 +58,14 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
        で, 指定したパスに train, valid, test を作成する.
        実行後は以下のようなディレクトリ構成になる．
 
+			 
        workspace  
-           |- images  
-           |      |- train  
-           |      |- valid  
-           |      |- test  
-           |
-           |- labels  
-                  |- train  
-                  |- valid  
-                  |- test  
+           ├── images  
+           │      ├── train  
+           │      ├── valid  
+           │      ├── test  
+           │
+           ├── labels  
+                  ├── train  
+                  ├── valid  
+                  ├── test  
