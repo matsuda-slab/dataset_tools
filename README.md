@@ -11,7 +11,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
 の形式で書かれたテキストファイルを想定している．
 
 ## 手順
-1．作業ディレクトリを以下のようなディレクトリ構成とする．
+1. 作業ディレクトリを以下のようなディレクトリ構成とする．
    workspace は，作業ディレクトリのルートディレクトリを表す．
 
 	 ```
@@ -23,7 +23,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
    images : 画像ファイルを置いたディレクトリ
    labels : YOLO形式のアノテーションファイルを置いたディレクトリ
 
-2．classify.sh を使って，images のデータセットを train，valid，test に分類する．
+2. classify.sh を使って，images のデータセットを train，valid，test に分類する．
    <!--実行後，以下のようなディレクトリになる．
 
    workspace
@@ -38,7 +38,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
               |- test
               -->
 
-3．create_list.py を使って，画像パスが書かれたリストファイルを作成する．
+3. create_list.py を使って，画像パスが書かれたリストファイルを作成する．
    学習やテストの際は，このリストファイルをもとに，データセットにアクセスする．
 
 ## 各スクリプトについて
@@ -57,7 +57,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
 
 * create_list.py  
   train，valid，test のディレクトリ内容を元に，画像のパスを列挙した
-  リストファイルを生成する．
+  リストファイルを生成する． 
   [ Usage ]
     $ create_list.py {データセットのtrain，valid，testがあるパス}
 
@@ -65,12 +65,12 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
   images のデータセットを，train，valid，test に分類する． 
 
   [ Usage ]  
-    1．データセットのディレクトリ images，labels を用意する
-    2．必要なら，classify.sh の train，valid，test の比率を調整する．
+    1. データセットのディレクトリ images，labels を用意する．
+    2. 必要なら，classify.sh の train，valid，test の比率を調整する．
        デフォルトは train : valid : test = 7 : 2 : 1．  
        必要なら，classify.sh の IMG_FORMAT を変える．
        デフォルトは png
-    3．classify.sh {images，labels のあるパス}
+    3. classify.sh {images，labels のあるパス}  
        で，指定したパスに train，valid，test を作成する．
        実行後は以下のようなディレクトリ構成になる．
 
