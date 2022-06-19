@@ -14,9 +14,11 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
 1．作業ディレクトリを以下のようなディレクトリ構成とする．
    workspace は，作業ディレクトリのルートディレクトリを表す．
 
+	 ```
    workspace  
-       |- images  
-       |- labels
+       ├── images  
+       └── labels
+	 ```
 
    images : 画像ファイルを置いたディレクトリ
    labels : YOLO形式のアノテーションファイルを置いたディレクトリ
@@ -40,7 +42,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
    学習やテストの際は，このリストファイルをもとに，データセットにアクセスする．
 
 ## 各スクリプトについて
-* cocodatasets_createpart/main.py  
+- *cocodatasets_createpart/main.py*  
   coco の instance ファイル (instances_trainval35k.json など) から
   画像ファイルへのパスを羅列したファイル (trainvalno5k.txt みたいなファイル)
   を生成する．
@@ -61,6 +63,7 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
 
 * classify.sh  
   images のデータセットを，train，valid，test に分類する． 
+
   [ Usage ]  
     1．データセットのディレクトリ images，labels を用意する
     2．必要なら，classify.sh の train，valid，test の比率を調整する．
@@ -71,13 +74,15 @@ YOLO形式の学習データセットを用いた学習を行うことを想定�
        で，指定したパスに train，valid，test を作成する．
        実行後は以下のようなディレクトリ構成になる．
 
-       workspace  
-           |- images  
-           |      |- train  
-           |      |- valid  
-           |      |- test  
-           |
-           |- labels  
-                  |- train  
-                  |- valid  
-                  |- test  
+	```
+  workspace  
+      ├── images  
+      │      ├── train  
+      │      ├── valid  
+      │      └── test  
+      │
+      └── labels  
+             ├── train  
+             ├── valid  
+             └── test  
+	```
